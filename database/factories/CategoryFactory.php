@@ -23,7 +23,7 @@ class CategoryFactory extends Factory
         return [
             'name' => $name,
             'slug' => Str::slug($name),
-            'status' =>  fake()->randomElement(StatusEnum::cases())->value,
+            'status' =>   StatusEnum::ACTIVE,
             'created_at' => $date,
             'updated_at' => $date
         ];

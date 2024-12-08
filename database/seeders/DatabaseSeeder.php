@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
                 CommentSeeder::class,
                 ContactSeeder::class,
                 AdminSeeder::class,
-                CommentSeeder::class
+                CommentSeeder::class,
+                SettingsSeeder::class
             ]
         );
     }

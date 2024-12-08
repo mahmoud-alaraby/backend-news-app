@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('slug');
             $table->longText('description');
             $table->boolean('commetable')->default(true);
+            $table->bigInteger('views')->default(0);
             $table->enum('status', array_map(fn($case) => $case->value, StatusEnum::cases()))->default(StatusEnum::DRAFT);
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');

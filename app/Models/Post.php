@@ -8,11 +8,11 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Image;
-
+use Staudenmeir\EloquentEagerLimit\HasEagerLimit;
 
 class Post extends Model
 {
-    use HasFactory;
+    use HasFactory, HasEagerLimit;
     protected $fillable = ['title', 'slug', 'description', 'commetable', 'status', 'user_id', 'category_id'];
 
 
